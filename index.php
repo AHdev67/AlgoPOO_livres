@@ -13,5 +13,11 @@ complète d’un auteur.
 <h2>Résultat</h2>
 
 <?php
-    
+    spl_autoload_register(function ($class_name) {
+        include $class_name . '.php';
+    });
+
+    $auteur1= new Auteur("Stephen","King");
+
+    $livre1= new Livre("Ça", 1138, 1986, 20);
 ?>

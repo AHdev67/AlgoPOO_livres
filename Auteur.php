@@ -29,7 +29,7 @@ class Auteur{
         return "$this->_prenom $this->_nom";
     }
 
-    public function affichageBiblio(){
+    public function afficherAuteur(){
         echo "<h1>Livres de $this</h1>";
     }
 }

@@ -3,6 +3,7 @@
 class Auteur{
     private string $_nom;
     private string $_prenom;
+    private array $_bibliographie;
 
     public function __construct(string $nom, string $prenom){
         $this->_nom = $nom;
@@ -27,9 +28,5 @@ class Auteur{
 
     public function __toString(): string{
         return "$this->_prenom $this->_nom";
-    }
-
-    public function afficherAuteur(){
-        echo "<h1>Livres de $this</h1>";
     }
 }

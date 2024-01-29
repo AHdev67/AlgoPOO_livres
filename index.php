@@ -17,7 +17,9 @@ complète d’un auteur.
         include $class_name . '.php';
     });
 
-    $auteur1= new Auteur("Stephen","King");
+    $auteur1= new Auteur("Stephen", "King");
 
-    $livre1= new Livre("Ça", 1138, 1986, 20);
+    $livre1= new Livre("Ça", 1138, 1986, 20, $auteur1);
+
+    echo $livre1->afficherLivre();
 ?>

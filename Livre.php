@@ -2,16 +2,17 @@
 
 class Livre extends Auteur{
     private string $_titre;
-    private string $_auteur;
     private int $_nbPages;
     private int $_anneeParution;
-    private int $_prix;
+    private float $_prix;
+    private Auteur $_auteur;
 
-    public function __construct(string $titre, int $nbPages, int $anneeParution, float $prix){
+    public function __construct(string $titre, int $nbPages, int $anneeParution, float $prix, Auteur $auteur){
         $this->_titre = $titre;
         $this->_nbPages = $nbPages;
         $this->_anneeParution = $anneeParution;
         $this->_prix = $prix;
+        $this->_auteur = $auteur;
     }
 
     public function getTitre(): string{
@@ -20,14 +21,6 @@ class Livre extends Auteur{
 
     public function setTitre(string $titre){
         $this->_nom = $titre;
-    }
-
-    public function getAuteur(): string{
-        return $this->_auteur;
-    }
-
-    public function setAuteur(string $auteur){
-        $this->_nom = $auteur;
     }
 
     public function getnbPages(): int{
@@ -46,11 +39,11 @@ class Livre extends Auteur{
         $this->_anneeParution = $anneeParution;
     }
 
-    public function getPrix(): int{
+    public function getPrix(): float{
         return $this->_prix;
     }
 
-    public function setPrix(int $prix){
+    public function setPrix(float $prix){
         $this->_prix = $prix;
     }
 
@@ -59,11 +52,6 @@ class Livre extends Auteur{
     }
 
     public function afficherLivre(){
-        echo "$this : $this->_nbPages / $this->_prix €";
+        echo "$this : $this->_nbPages pages / $this->_prix €";
     }
-
-    public function afficherBiblio(){
-        echo "Livres de $this";
-    }
-
 }

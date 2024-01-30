@@ -20,6 +20,15 @@ complète d’un auteur.
     $auteur1= new Auteur("Stephen", "King");
 
     $livre1= new Livre("Ça", 1138, 1986, 20, $auteur1);
+    $livre2= new Livre("Simetierre", 1983, 374, 15, $auteur1);
+    $livre3= new Livre("Le Fléau",1978, 823, 14, $auteur1);
+    $livre4= new Livre("Shining", 1977, 447, 16, $auteur1);
 
-    echo $livre1->afficherLivre();
+    echo $auteur1->afficherBiblio();
+
+    $auteur2= new Auteur("Emile", "Zola");
+
+    $livre5= new Livre("L'Assommoir", 1876, 502, 9.99, $auteur2);
+
+    echo $auteur2->afficherBiblio();
 ?>
